@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_light"
+    tools:context=".InscriptionFragment">
+
+    <!-- Carte principale -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:padding="16dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Champs de saisie -->
+            <EditText
+                android:id="@+id/et_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Login"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mot de passe"
+                android:inputType="textPassword"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/et_nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nom"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/et_prenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prénom"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/et_date_naissance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date de naissance"
+                android:inputType="date"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/et_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Téléphone"
+                android:inputType="phone"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Centres d'intérêt -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Centres d'intérêt"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/cb_sport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sport"/>
+
+                <CheckBox
+                    android:id="@+id/cb_musique"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Musique"/>
+
+                <CheckBox
+                    android:id="@+id/cb_lecture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lecture"/>
+
+                <CheckBox
+                    android:id="@+id/cb_voyage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voyage"/>
+
+                <CheckBox
+                    android:id="@+id/cb_cinema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cinéma"/>
+
+                <CheckBox
+                    android:id="@+id/cb_cuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cuisine"/>
+            </GridLayout>
+
+            <!-- Bouton Soumettre -->
+            <Button
+                android:id="@+id/btn_soumettre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soumettre"
+                android:backgroundTint="@color/background_light"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
