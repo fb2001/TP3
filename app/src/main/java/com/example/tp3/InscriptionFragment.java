@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -50,6 +51,16 @@ public class InscriptionFragment extends Fragment {
             String phone = editPhone.getText().toString().trim();
             String email = editEmail.getText().toString().trim();
 
+            // Récupération du genre sélectionné
+            RadioGroup radioGroupGenre = view.findViewById(R.id.radioGroupGenre);
+            int selectedId = radioGroupGenre.getCheckedRadioButtonId();
+            String genre = "";
+            if (selectedId == R.id.radioHomme) {
+                genre = "Homme";
+            } else if (selectedId == R.id.radioFemme) {
+                genre = "Femme";
+            }
+
             // Centres d’intérêt sélectionnés
             StringBuilder centresInteret = new StringBuilder();
             if (checkSport.isChecked()) centresInteret.append("Sport ");
@@ -64,7 +75,7 @@ public class InscriptionFragment extends Fragment {
             }
 
             // Création d'un nouvel utilisateur
-            User user = new User(login, password, nom, prenom, dateNaissance, phone, email, centresInteret.toString());
+            User user = new User(login, password, nom, prenom, dateNaissance, phone, email, centresInteret.toString(), genre);
 
             // Insertion dans la base de données
             new Thread(() -> {

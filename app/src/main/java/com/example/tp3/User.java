@@ -16,9 +16,10 @@ public class User {
     public String telephone;
     public String email;
     public String centresInteret;
+    public String genre; // Nouveau champ pour le genre
 
     // Constructeur
-    public User(String login, String password, String nom, String prenom, String dateNaissance, String telephone, String email, String centresInteret) {
+    public User(String login, String password, String nom, String prenom, String dateNaissance, String telephone, String email, String centresInteret, String genre) {
         this.login = login;
         this.password = password;
         this.nom = nom;
@@ -27,5 +28,6 @@ public class User {
         this.telephone = telephone;
         this.email = email;
         this.centresInteret = centresInteret;
+        this.genre = genre;
     }
 }

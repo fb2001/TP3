@@ -3,4 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_light">#F5F5F5</color>
+    <color name="primary">#6200EE</color>  <!-- Violet (Couleur principale) -->
+        <color name="primary_dark">#3700B3</color>  <!-- Violet foncé -->
+        <color name="accent">#03DAC5</color>  <!-- Vert menthe pour accents -->
+        <color name="gray">#BDBDBD</color>  <!-- Gris pour les bordures -->
+        <color name="text_primary">#212121</color>  <!-- Noir pour les textes -->
+        <color name="text_secondary">#757575</color>  <!-- Gris foncé pour textes secondaires -->
+
 </resources>

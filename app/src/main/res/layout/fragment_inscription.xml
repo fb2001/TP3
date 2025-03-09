@@ -6,17 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/background_light"
+    android:background="@drawable/gradient_background"
     tools:context=".InscriptionFragment">
 
     <!-- Carte principale -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
-        android:padding="16dp"
-        android:background="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp"
+        android:padding="20dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -25,74 +25,112 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="10dp">
 
-            <!-- Champs de saisie -->
+            <!-- Champs de saisie stylisés -->
             <EditText
                 android:id="@+id/et_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Login"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp" />
+                style="@style/StyledEditText"
+                android:hint="Login" />
 
             <EditText
                 android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyledEditText"
                 android:hint="Mot de passe"
-                android:inputType="textPassword"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"/>
+                android:inputType="textPassword" />
 
             <EditText
                 android:id="@+id/et_nom"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nom"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"/>
+                style="@style/StyledEditText"
+                android:hint="Nom" />
 
             <EditText
                 android:id="@+id/et_prenom"
+                style="@style/StyledEditText"
+                android:hint="Prénom" />
+
+            <!-- Sélection du genre -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genre"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupGenre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Prénom"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"/>
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
 
+                <!-- Option Homme -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_male"
+                        android:layout_gravity="center"/>
+
+                    <RadioButton
+                        android:id="@+id/radioHomme"
+                        style="@style/StyledRadioButton"
+                        android:text="Homme"
+                        android:drawablePadding="0dp"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Option Femme -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_female"
+                        android:layout_gravity="center"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFemme"
+                        style="@style/StyledRadioButton"
+                        android:text="Femme"
+                        android:drawablePadding="0dp"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </RadioGroup>
+
+            <!-- Autres champs -->
             <EditText
                 android:id="@+id/et_date_naissance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyledEditText"
                 android:hint="Date de naissance"
-                android:inputType="date"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"/>
+                android:inputType="date" />
 
             <EditText
                 android:id="@+id/et_telephone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyledEditText"
                 android:hint="Téléphone"
-                android:inputType="phone"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"/>
+                android:inputType="phone" />
 
             <EditText
                 android:id="@+id/et_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyledEditText"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:background="@android:drawable/edit_text"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"/>
+                android:inputType="textEmailAddress" />
 
             <!-- Centres d'intérêt -->
             <TextView
@@ -101,7 +139,8 @@
                 android:text="Centres d'intérêt"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"/>
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -111,50 +150,42 @@
 
                 <CheckBox
                     android:id="@+id/cb_sport"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/StyledCheckBox"
                     android:text="Sport"/>
 
                 <CheckBox
                     android:id="@+id/cb_musique"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/StyledCheckBox"
                     android:text="Musique"/>
 
                 <CheckBox
                     android:id="@+id/cb_lecture"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/StyledCheckBox"
                     android:text="Lecture"/>
 
                 <CheckBox
                     android:id="@+id/cb_voyage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/StyledCheckBox"
                     android:text="Voyage"/>
 
                 <CheckBox
                     android:id="@+id/cb_cinema"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/StyledCheckBox"
                     android:text="Cinéma"/>
 
                 <CheckBox
                     android:id="@+id/cb_cuisine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/StyledCheckBox"
                     android:text="Cuisine"/>
             </GridLayout>
 
-            <!-- Bouton Soumettre -->
+            <!-- Bouton Soumettre amélioré -->
             <Button
                 android:id="@+id/btn_soumettre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/StyledButton"
                 android:text="Soumettre"
-                android:backgroundTint="@color/background_light"
-                android:textColor="@color/white"
-                android:layout_marginTop="16dp"/>
+                android:drawableLeft="@drawable/ic_check"
+                android:drawablePadding="10dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
