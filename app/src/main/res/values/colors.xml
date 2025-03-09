@@ -7,7 +7,7 @@
     <color name="secondary_color">#FBBC05</color>   <!-- Jaune/Orange Google -->
     <color name="tertiary_color">#34A853</color>    <!-- Vert Google -->
     <color name="error_color">#EA4335</color>       <!-- Rouge Google -->
-
+    <color name="accent_color_light">#80A8D4</color>  <!-- Bleu clair accent léger -->
     <color name="card_background">#FFFFFF</color>   <!-- Blanc pour les cartes -->
     <color name="card_background_light">#F6F9FE</color> <!-- Bleu très clair pour les cartes secondaires -->
 
