@@ -59,59 +59,31 @@
                 android:layout_marginTop="12dp"
                 android:textColor="@color/black"/>
 
-            <RadioGroup
-                android:id="@+id/radioGroupGenre"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:gravity="center">
 
                 <!-- Option Homme -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_male"
-                        android:layout_gravity="center"/>
-
-                    <RadioButton
-                        android:id="@+id/radioHomme"
-                        style="@style/StyledRadioButton"
-                        android:text="Homme"
-                        android:drawablePadding="0dp"
-                        android:button="@android:color/transparent"
-                        android:gravity="center"/>
-                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ic_male"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_male"
+                android:layout_margin="8dp"
+                android:onClick="onMaleClicked"/>
 
                 <!-- Option Femme -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_female"
-                        android:layout_gravity="center"/>
-
-                    <RadioButton
-                        android:id="@+id/radioFemme"
-                        style="@style/StyledRadioButton"
-                        android:text="Femme"
-                        android:drawablePadding="0dp"
-                        android:button="@android:color/transparent"
-                        android:gravity="center"/>
-                </LinearLayout>
-            </RadioGroup>
+                <ImageView
+                    android:id="@+id/ic_female"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_female"
+                android:layout_margin="8dp"
+                android:onClick="onFemaleClicked"/>
+            </LinearLayout>
 
             <!-- Autres champs -->
             <EditText
