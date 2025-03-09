@@ -21,7 +21,7 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp"
             android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/card_background">
+            app:cardBackgroundColor="@color/background_card">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,15 +29,15 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <!-- Titre de la section -->
+                <!-- Titre de la section avec style amélioré -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Créer un compte"
-                    android:textSize="24sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
-                    android:textColor="@color/primary_text"
-                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/primary"
+                    android:layout_marginBottom="24dp"
                     android:textAlignment="center"/>
 
                 <!-- Section des informations d'identification -->
@@ -47,13 +47,14 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="12dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_identification"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="12dp"
+                        android:tint="@color/primary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -61,15 +62,15 @@
                         android:text="Informations d'identification"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/primary_text"/>
+                        android:textColor="@color/text_primary"/>
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeColor="@color/accent_color"
-                    app:hintTextColor="@color/accent_color"
-                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="@color/accent"
+                    app:hintTextColor="@color/accent"
+                    android:layout_marginBottom="16dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -78,17 +79,18 @@
                         android:layout_height="wrap_content"
                         android:hint="Login"
                         android:drawableStart="@drawable/ic_person_small"
-                        android:drawablePadding="8dp"
-                        android:textColor="@color/primary_text"/>
+                        android:drawablePadding="12dp"
+                        android:textColor="@color/text_primary"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeColor="@color/accent_color"
-                    app:hintTextColor="@color/accent_color"
-                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="@color/accent"
+                    app:hintTextColor="@color/accent"
+                    android:layout_marginBottom="16dp"
                     app:endIconMode="password_toggle"
+                    app:endIconTint="@color/primary"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -98,24 +100,31 @@
                         android:hint="Mot de passe"
                         android:inputType="textPassword"
                         android:drawableStart="@drawable/ic_lock_small"
-                        android:drawablePadding="8dp"
-                        android:textColor="@color/primary_text"/>
+                        android:drawablePadding="12dp"
+                        android:textColor="@color/text_primary"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Section des informations personnelles -->
+                <!-- Section des informations personnelles avec séparateur -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp">
+                    android:layout_marginBottom="16dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_profile"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="12dp"
+                        app:tint="@color/primary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -123,22 +132,22 @@
                         android:text="Informations personnelles"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/primary_text"/>
+                        android:textColor="@color/text_primary"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="12dp">
+                    android:layout_marginBottom="16dp">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginEnd="6dp"
-                        app:boxStrokeColor="@color/accent_color"
-                        app:hintTextColor="@color/accent_color"
+                        android:layout_marginEnd="8dp"
+                        app:boxStrokeColor="@color/accent"
+                        app:hintTextColor="@color/accent"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -146,16 +155,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Nom"
-                            android:textColor="@color/primary_text"/>
+                            android:textColor="@color/text_primary"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginStart="6dp"
-                        app:boxStrokeColor="@color/accent_color"
-                        app:hintTextColor="@color/accent_color"
+                        android:layout_marginStart="8dp"
+                        app:boxStrokeColor="@color/accent"
+                        app:hintTextColor="@color/accent"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -163,105 +172,91 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Prénom"
-                            android:textColor="@color/primary_text"/>
+                            android:textColor="@color/text_primary"/>
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
-                <!-- Sélection du genre avec meilleure présentation -->
-                <LinearLayout
+                <!-- Sélection du genre avec style amélioré -->
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_gender"
-                        android:layout_marginEnd="8dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Genre"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/primary_text"/>
-                </LinearLayout>
+                    android:text="Genre"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="8dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="20dp"
                     android:gravity="center">
 
                     <!-- Option Homme avec animation et style améliorés -->
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_male"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_margin="8dp"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"
-                        app:cardBackgroundColor="@color/card_background_light">
+                        app:cardElevation="2dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="12dp">
+                            android:padding="16dp">
 
                             <ImageView
                                 android:id="@+id/ic_male"
                                 android:layout_width="56dp"
                                 android:layout_height="56dp"
                                 android:src="@drawable/ic_male"
-                                android:padding="8dp"
-                                android:background="@drawable/circle_background"/>
+                                android:padding="12dp"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Homme"
-                                android:textColor="@color/primary_text"
+                                android:textColor="@color/text_primary"
+                                android:textStyle="bold"
                                 android:layout_marginTop="8dp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <!-- Option Femme avec animation et style améliorés -->
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_female"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_margin="8dp"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"
-                        app:cardBackgroundColor="@color/card_background_light">
+                        app:cardElevation="2dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:padding="12dp">
+                            android:padding="16dp">
 
                             <ImageView
                                 android:id="@+id/ic_female"
                                 android:layout_width="56dp"
                                 android:layout_height="56dp"
                                 android:src="@drawable/ic_female"
-                                android:padding="8dp"
-                                android:background="@drawable/circle_background"/>
+                                android:padding="12dp"
+                                tools:ignore="UseAppTint" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Femme"
-                                android:textColor="@color/primary_text"
+                                android:textColor="@color/text_primary"
+                                android:textStyle="bold"
                                 android:layout_marginTop="8dp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -271,9 +266,9 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeColor="@color/accent_color"
-                    app:hintTextColor="@color/accent_color"
-                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="@color/accent"
+                    app:hintTextColor="@color/accent"
+                    android:layout_marginBottom="16dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -282,17 +277,17 @@
                         android:layout_height="wrap_content"
                         android:hint="Date de naissance"
                         android:drawableStart="@drawable/ic_calendar_small"
-                        android:drawablePadding="8dp"
+                        android:drawablePadding="12dp"
                         android:inputType="date"
-                        android:textColor="@color/primary_text"/>
+                        android:textColor="@color/text_primary"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeColor="@color/accent_color"
-                    app:hintTextColor="@color/accent_color"
-                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="@color/accent"
+                    app:hintTextColor="@color/accent"
+                    android:layout_marginBottom="16dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -301,17 +296,17 @@
                         android:layout_height="wrap_content"
                         android:hint="Téléphone"
                         android:drawableStart="@drawable/ic_phone_small"
-                        android:drawablePadding="8dp"
+                        android:drawablePadding="12dp"
                         android:inputType="phone"
-                        android:textColor="@color/primary_text"/>
+                        android:textColor="@color/text_primary"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:boxStrokeColor="@color/accent_color"
-                    app:hintTextColor="@color/accent_color"
-                    android:layout_marginBottom="16dp"
+                    app:boxStrokeColor="@color/accent"
+                    app:hintTextColor="@color/accent"
+                    android:layout_marginBottom="24dp"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -320,38 +315,39 @@
                         android:layout_height="wrap_content"
                         android:hint="Email"
                         android:drawableStart="@drawable/ic_email_small"
-                        android:drawablePadding="8dp"
+                        android:drawablePadding="12dp"
                         android:inputType="textEmailAddress"
-                        android:textColor="@color/primary_text"/>
+                        android:textColor="@color/text_primary"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Centres d'intérêt dans une carte séparée -->
+                <!-- Centres d'intérêt dans une carte séparée avec style amélioré -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    android:layout_marginBottom="16dp"
-                    app:cardBackgroundColor="@color/card_background_light">
+                    app:cardElevation="2dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/primary_very_light">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="20dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="center_vertical"
-                            android:layout_marginBottom="12dp">
+                            android:layout_marginBottom="16dp">
 
                             <ImageView
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:src="@drawable/ic_interests"
-                                android:layout_marginEnd="8dp"/>
+                                android:layout_marginEnd="12dp"
+                                app:tint="@color/primary"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -359,7 +355,7 @@
                                 android:text="Centres d'intérêt"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/primary_text"/>
+                                android:textColor="@color/primary"/>
                         </LinearLayout>
 
                         <GridLayout
@@ -374,25 +370,26 @@
                                 android:layout_columnWeight="1"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginBottom="8dp">
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cb_sport"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:buttonTint="@color/accent_color"/>
+                                    android:buttonTint="@color/primary"/>
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/ic_sport"
-                                    android:layout_marginEnd="4dp"/>
+                                    android:layout_marginEnd="8dp"
+                                    app:tint="@color/primary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Sport"
-                                    android:textColor="@color/primary_text"/>
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
 
                             <!-- CheckBox personnalisée pour Musique -->
@@ -402,25 +399,26 @@
                                 android:layout_columnWeight="1"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginBottom="8dp">
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cb_musique"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:buttonTint="@color/accent_color"/>
+                                    android:buttonTint="@color/primary"/>
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/ic_music"
-                                    android:layout_marginEnd="4dp"/>
+                                    android:layout_marginEnd="8dp"
+                                    android:tint="@color/primary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Musique"
-                                    android:textColor="@color/primary_text"/>
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
 
                             <!-- CheckBox personnalisée pour Lecture -->
@@ -430,25 +428,26 @@
                                 android:layout_columnWeight="1"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginBottom="8dp">
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cb_lecture"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:buttonTint="@color/accent_color"/>
+                                    android:buttonTint="@color/primary"/>
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/ic_book"
-                                    android:layout_marginEnd="4dp"/>
+                                    android:layout_marginEnd="8dp"
+                                    android:tint="@color/primary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Lecture"
-                                    android:textColor="@color/primary_text"/>
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
 
                             <!-- CheckBox personnalisée pour Voyage -->
@@ -458,25 +457,26 @@
                                 android:layout_columnWeight="1"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginBottom="8dp">
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cb_voyage"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:buttonTint="@color/accent_color"/>
+                                    android:buttonTint="@color/primary"/>
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/ic_travel"
-                                    android:layout_marginEnd="4dp"/>
+                                    android:layout_marginEnd="8dp"
+                                    android:tint="@color/primary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Voyage"
-                                    android:textColor="@color/primary_text"/>
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
 
                             <!-- CheckBox personnalisée pour Cinéma -->
@@ -486,25 +486,26 @@
                                 android:layout_columnWeight="1"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginBottom="8dp">
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cb_cinema"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:buttonTint="@color/accent_color"/>
+                                    android:buttonTint="@color/primary"/>
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/ic_cinema"
-                                    android:layout_marginEnd="4dp"/>
+                                    android:layout_marginEnd="8dp"
+                                    android:tint="@color/primary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Cinéma"
-                                    android:textColor="@color/primary_text"/>
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
 
                             <!-- CheckBox personnalisée pour Cuisine -->
@@ -514,25 +515,26 @@
                                 android:layout_columnWeight="1"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical"
-                                android:layout_marginBottom="8dp">
+                                android:layout_marginBottom="12dp">
 
                                 <CheckBox
                                     android:id="@+id/cb_cuisine"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:buttonTint="@color/accent_color"/>
+                                    android:buttonTint="@color/primary"/>
 
                                 <ImageView
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/ic_cooking"
-                                    android:layout_marginEnd="4dp"/>
+                                    android:layout_marginEnd="8dp"
+                                    android:tint="@color/primary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Cuisine"
-                                    android:textColor="@color/primary_text"/>
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
                         </GridLayout>
                     </LinearLayout>
@@ -547,10 +549,10 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:cornerRadius="12dp"
-                    android:backgroundTint="@color/accent_color"
+                    android:backgroundTint="@color/primary"
                     app:icon="@drawable/ic_check"
                     app:iconGravity="textStart"
-                    app:iconPadding="8dp"
+                    app:iconPadding="12dp"
                     android:padding="12dp"
                     android:elevation="4dp"/>
             </LinearLayout>
