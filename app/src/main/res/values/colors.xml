@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="background_light">#F5F5F5</color>
+    <color name="primary_color">#4285F4</color>     <!-- Bleu Google -->
+    <color name="primary_dark">#3367D6</color>      <!-- Bleu foncé -->
+    <color name="accent_color">#4285F4</color>      <!-- Accent bleu -->
     <color name="primary">#6200EE</color>  <!-- Violet (Couleur principale) -->
-        <color name="primary_dark">#3700B3</color>  <!-- Violet foncé -->
-        <color name="accent">#03DAC5</color>  <!-- Vert menthe pour accents -->
-        <color name="gray">#BDBDBD</color>  <!-- Gris pour les bordures -->
-        <color name="text_primary">#212121</color>  <!-- Noir pour les textes -->
-        <color name="text_secondary">#757575</color>  <!-- Gris foncé pour textes secondaires -->
+    <color name="secondary_color">#FBBC05</color>   <!-- Jaune/Orange Google -->
+    <color name="tertiary_color">#34A853</color>    <!-- Vert Google -->
+    <color name="error_color">#EA4335</color>       <!-- Rouge Google -->
 
+    <color name="card_background">#FFFFFF</color>   <!-- Blanc pour les cartes -->
+    <color name="card_background_light">#F6F9FE</color> <!-- Bleu très clair pour les cartes secondaires -->
+
+    <color name="primary_text">#202124</color>      <!-- Gris foncé pour texte -->
+    <color name="secondary_text">#5F6368</color>    <!-- Gris moyen pour texte secondaire -->
+    <color name="disabled_text">#9AA0A6</color>     <!-- Gris clair pour texte désactivé -->
+
+    <color name="background_light">#F8F9FA</color>  <!-- Gris très clair pour fond -->
+    <color name="background_gray">#F1F3F4</color>   <!-- Gris clair pour fond secondaire -->
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

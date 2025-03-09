@@ -5,160 +5,395 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/gradient_background_blue"
     tools:context=".InscriptionFragment">
 
-    <!-- Carte principale -->
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="12dp"
-        android:padding="20dp"
-        android:backgroundTint="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp">
 
-        <LinearLayout
+        <!-- Carte principale avec ombre et coins arrondis -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <!-- Champs de saisie stylisés -->
-            <EditText
-                android:id="@+id/et_login"
-                style="@style/StyledEditText"
-                android:hint="Login" />
-
-            <EditText
-                android:id="@+id/et_password"
-                style="@style/StyledEditText"
-                android:hint="Mot de passe"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:id="@+id/et_nom"
-                style="@style/StyledEditText"
-                android:hint="Nom" />
-
-            <EditText
-                android:id="@+id/et_prenom"
-                style="@style/StyledEditText"
-                android:hint="Prénom" />
-
-            <!-- Sélection du genre -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Genre"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"
-                android:textColor="@color/black"/>
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/card_background">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:gravity="center">
+                android:orientation="vertical"
+                android:padding="24dp">
 
-                <!-- Option Homme -->
-                <ImageView
-                    android:id="@+id/ic_male"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_male"
-                android:layout_margin="8dp"
-                android:onClick="onMaleClicked"/>
+                <!-- Titre de la section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Créer un compte"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginBottom="16dp"
+                    android:textAlignment="center"/>
 
-                <!-- Option Femme -->
-                <ImageView
-                    android:id="@+id/ic_female"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_female"
-                android:layout_margin="8dp"
-                android:onClick="onFemaleClicked"/>
+                <!-- Section des informations d'identification -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informations d'identification"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/accent_color"
+                    app:hintTextColor="@color/accent_color"
+                    android:layout_marginBottom="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Login"
+                        android:drawableStart="@drawable/ic_male"
+                        android:drawablePadding="8dp"
+                        android:textColor="@color/primary_text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/accent_color"
+                    app:hintTextColor="@color/accent_color"
+                    android:layout_marginBottom="12dp"
+                    app:endIconMode="password_toggle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mot de passe"
+                        android:inputType="textPassword"
+                        android:drawableStart="@drawable/ic_lock"
+                        android:drawablePadding="8dp"
+                        android:textColor="@color/primary_text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Section des informations personnelles -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informations personnelles"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        app:boxStrokeColor="@color/accent_color"
+                        app:hintTextColor="@color/accent_color"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_nom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nom"
+                            android:textColor="@color/primary_text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        app:boxStrokeColor="@color/accent_color"
+                        app:hintTextColor="@color/accent_color"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_prenom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Prénom"
+                            android:textColor="@color/primary_text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Sélection du genre avec meilleure présentation -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genre"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center">
+
+                    <!-- Option Homme avec animation et style améliorés -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/card_background_light">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:id="@+id/ic_male"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/ic_male"
+                                android:padding="8dp"
+                                android:background="@drawable/circle_background"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Homme"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Option Femme avec animation et style améliorés -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/card_background_light">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:id="@+id/ic_female"
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/ic_female"
+                                android:padding="8dp"
+                                android:background="@drawable/circle_background"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Femme"
+                                android:textColor="@color/primary_text"
+                                android:layout_marginTop="8dp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!-- Autres informations de contact -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/accent_color"
+                    app:hintTextColor="@color/accent_color"
+                    android:layout_marginBottom="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_date_naissance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Date de naissance"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawablePadding="8dp"
+                        android:inputType="date"
+                        android:textColor="@color/primary_text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/accent_color"
+                    app:hintTextColor="@color/accent_color"
+                    android:layout_marginBottom="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_telephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Téléphone"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:drawablePadding="8dp"
+                        android:inputType="phone"
+                        android:textColor="@color/primary_text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/accent_color"
+                    app:hintTextColor="@color/accent_color"
+                    android:layout_marginBottom="16dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:drawableStart="@drawable/ic_email"
+                        android:drawablePadding="8dp"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/primary_text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Centres d'intérêt dans une carte séparée -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/card_background_light">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Centres d'intérêt"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginBottom="12dp"/>
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2">
+
+                            <CheckBox
+                                android:id="@+id/cb_sport"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:text="Sport"
+                                android:textColor="@color/primary_text"
+                                android:buttonTint="@color/accent_color"
+                                android:layout_marginBottom="8dp"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_musique"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:text="Musique"
+                                android:textColor="@color/primary_text"
+                                android:buttonTint="@color/accent_color"
+                                android:layout_marginBottom="8dp"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_lecture"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:text="Lecture"
+                                android:textColor="@color/primary_text"
+                                android:buttonTint="@color/accent_color"
+                                android:layout_marginBottom="8dp"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_voyage"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:text="Voyage"
+                                android:textColor="@color/primary_text"
+                                android:buttonTint="@color/accent_color"
+                                android:layout_marginBottom="8dp"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_cinema"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:text="Cinéma"
+                                android:textColor="@color/primary_text"
+                                android:buttonTint="@color/accent_color"
+                                android:layout_marginBottom="8dp"/>
+
+                            <CheckBox
+                                android:id="@+id/cb_cuisine"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:text="Cuisine"
+                                android:textColor="@color/primary_text"
+                                android:buttonTint="@color/accent_color"
+                                android:layout_marginBottom="8dp"/>
+                        </GridLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Bouton Soumettre avec animation et style plus attrayant -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_soumettre"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Créer mon compte"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp"
+                    android:backgroundTint="@color/accent_color"
+                    app:icon="@drawable/ic_check"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    android:padding="12dp"
+                    android:elevation="4dp"/>
             </LinearLayout>
-
-            <!-- Autres champs -->
-            <EditText
-                android:id="@+id/et_date_naissance"
-                style="@style/StyledEditText"
-                android:hint="Date de naissance"
-                android:inputType="date" />
-
-            <EditText
-                android:id="@+id/et_telephone"
-                style="@style/StyledEditText"
-                android:hint="Téléphone"
-                android:inputType="phone" />
-
-            <EditText
-                android:id="@+id/et_email"
-                style="@style/StyledEditText"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
-
-            <!-- Centres d'intérêt -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Centres d'intérêt"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"
-                android:textColor="@color/black"/>
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:layout_marginTop="8dp">
-
-                <CheckBox
-                    android:id="@+id/cb_sport"
-                    style="@style/StyledCheckBox"
-                    android:text="Sport"/>
-
-                <CheckBox
-                    android:id="@+id/cb_musique"
-                    style="@style/StyledCheckBox"
-                    android:text="Musique"/>
-
-                <CheckBox
-                    android:id="@+id/cb_lecture"
-                    style="@style/StyledCheckBox"
-                    android:text="Lecture"/>
-
-                <CheckBox
-                    android:id="@+id/cb_voyage"
-                    style="@style/StyledCheckBox"
-                    android:text="Voyage"/>
-
-                <CheckBox
-                    android:id="@+id/cb_cinema"
-                    style="@style/StyledCheckBox"
-                    android:text="Cinéma"/>
-
-                <CheckBox
-                    android:id="@+id/cb_cuisine"
-                    style="@style/StyledCheckBox"
-                    android:text="Cuisine"/>
-            </GridLayout>
-
-            <!-- Bouton Soumettre amélioré -->
-            <Button
-                android:id="@+id/btn_soumettre"
-                style="@style/StyledButton"
-                android:text="Soumettre"
-                android:drawableLeft="@drawable/ic_check"
-                android:drawablePadding="10dp"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
