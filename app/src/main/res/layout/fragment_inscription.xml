@@ -41,15 +41,28 @@
                     android:textAlignment="center"/>
 
                 <!-- Section des informations d'identification -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Informations d'identification"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_text"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_identification"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informations d'identification"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"/>
+                </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -64,7 +77,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Login"
-                        android:drawableStart="@drawable/ic_male"
+                        android:drawableStart="@drawable/ic_person_small"
                         android:drawablePadding="8dp"
                         android:textColor="@color/primary_text"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -84,21 +97,34 @@
                         android:layout_height="wrap_content"
                         android:hint="Mot de passe"
                         android:inputType="textPassword"
-                        android:drawableStart="@drawable/ic_lock"
+                        android:drawableStart="@drawable/ic_lock_small"
                         android:drawablePadding="8dp"
                         android:textColor="@color/primary_text"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Section des informations personnelles -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Informations personnelles"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_text"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_profile"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informations personnelles"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"/>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -142,15 +168,28 @@
                 </LinearLayout>
 
                 <!-- Sélection du genre avec meilleure présentation -->
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Genre"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_text"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_gender"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Genre"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"/>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -242,7 +281,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Date de naissance"
-                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawableStart="@drawable/ic_calendar_small"
                         android:drawablePadding="8dp"
                         android:inputType="date"
                         android:textColor="@color/primary_text"/>
@@ -261,7 +300,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Téléphone"
-                        android:drawableStart="@drawable/ic_phone"
+                        android:drawableStart="@drawable/ic_phone_small"
                         android:drawablePadding="8dp"
                         android:inputType="phone"
                         android:textColor="@color/primary_text"/>
@@ -280,7 +319,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Email"
-                        android:drawableStart="@drawable/ic_email"
+                        android:drawableStart="@drawable/ic_email_small"
                         android:drawablePadding="8dp"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/primary_text"/>
@@ -301,79 +340,200 @@
                         android:orientation="vertical"
                         android:padding="16dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Centres d'intérêt"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/primary_text"
-                            android:layout_marginBottom="12dp"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="12dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_interests"
+                                android:layout_marginEnd="8dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Centres d'intérêt"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_text"/>
+                        </LinearLayout>
 
                         <GridLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:columnCount="2">
 
-                            <CheckBox
-                                android:id="@+id/cb_sport"
+                            <!-- CheckBox personnalisée pour Sport -->
+                            <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_columnWeight="1"
-                                android:text="Sport"
-                                android:textColor="@color/primary_text"
-                                android:buttonTint="@color/accent_color"
-                                android:layout_marginBottom="8dp"/>
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="8dp">
 
-                            <CheckBox
-                                android:id="@+id/cb_musique"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:text="Musique"
-                                android:textColor="@color/primary_text"
-                                android:buttonTint="@color/accent_color"
-                                android:layout_marginBottom="8dp"/>
+                                <CheckBox
+                                    android:id="@+id/cb_sport"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/accent_color"/>
 
-                            <CheckBox
-                                android:id="@+id/cb_lecture"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:text="Lecture"
-                                android:textColor="@color/primary_text"
-                                android:buttonTint="@color/accent_color"
-                                android:layout_marginBottom="8dp"/>
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_sport"
+                                    android:layout_marginEnd="4dp"/>
 
-                            <CheckBox
-                                android:id="@+id/cb_voyage"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:text="Voyage"
-                                android:textColor="@color/primary_text"
-                                android:buttonTint="@color/accent_color"
-                                android:layout_marginBottom="8dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sport"
+                                    android:textColor="@color/primary_text"/>
+                            </LinearLayout>
 
-                            <CheckBox
-                                android:id="@+id/cb_cinema"
+                            <!-- CheckBox personnalisée pour Musique -->
+                            <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_columnWeight="1"
-                                android:text="Cinéma"
-                                android:textColor="@color/primary_text"
-                                android:buttonTint="@color/accent_color"
-                                android:layout_marginBottom="8dp"/>
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="8dp">
 
-                            <CheckBox
-                                android:id="@+id/cb_cuisine"
+                                <CheckBox
+                                    android:id="@+id/cb_musique"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/accent_color"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_music"
+                                    android:layout_marginEnd="4dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Musique"
+                                    android:textColor="@color/primary_text"/>
+                            </LinearLayout>
+
+                            <!-- CheckBox personnalisée pour Lecture -->
+                            <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_columnWeight="1"
-                                android:text="Cuisine"
-                                android:textColor="@color/primary_text"
-                                android:buttonTint="@color/accent_color"
-                                android:layout_marginBottom="8dp"/>
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="8dp">
+
+                                <CheckBox
+                                    android:id="@+id/cb_lecture"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/accent_color"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_book"
+                                    android:layout_marginEnd="4dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lecture"
+                                    android:textColor="@color/primary_text"/>
+                            </LinearLayout>
+
+                            <!-- CheckBox personnalisée pour Voyage -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="8dp">
+
+                                <CheckBox
+                                    android:id="@+id/cb_voyage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/accent_color"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_travel"
+                                    android:layout_marginEnd="4dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Voyage"
+                                    android:textColor="@color/primary_text"/>
+                            </LinearLayout>
+
+                            <!-- CheckBox personnalisée pour Cinéma -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="8dp">
+
+                                <CheckBox
+                                    android:id="@+id/cb_cinema"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/accent_color"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_cinema"
+                                    android:layout_marginEnd="4dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cinéma"
+                                    android:textColor="@color/primary_text"/>
+                            </LinearLayout>
+
+                            <!-- CheckBox personnalisée pour Cuisine -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="8dp">
+
+                                <CheckBox
+                                    android:id="@+id/cb_cuisine"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/accent_color"/>
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_cooking"
+                                    android:layout_marginEnd="4dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cuisine"
+                                    android:textColor="@color/primary_text"/>
+                            </LinearLayout>
                         </GridLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
